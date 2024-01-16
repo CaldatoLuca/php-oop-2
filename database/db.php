@@ -3,7 +3,7 @@
 $foods = [
     [
         "type" => "food",
-        "name" => "Area Wild a base di Manzo e Salmone",
+        "name" => "Area Wild",
         "price" => 40.24,
         "image" => "./img/dog-food.jpg",
         "category" => "DOG",
@@ -14,7 +14,7 @@ $foods = [
     ],
     [
         "type" => "food",
-        "name" => "Oasy Gatto Paté 100 G",
+        "name" => "Oasy Gatto Paté",
         "price" => 0.65,
         "image" => "./img/cat-food.jpg",
         "category" => "CAT",
@@ -37,7 +37,7 @@ $toys = [
     ],
     [
         "type" => "toy",
-        "name" => "Colonna tiragraffi Scratch & Play",
+        "name" => "Colonna tiragraffi",
         "price" => 3.00,
         "image" => "./img/cat-toy.jpg",
         "category" => "CAT",

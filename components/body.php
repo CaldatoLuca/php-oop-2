@@ -10,17 +10,28 @@
         <div class="row justify-content-center">
             <?php foreach ($shop->catalog as $product) : ?>
                 <div class="col-md-4 mb-3">
-                    <div class="card">
+                    <div class="card rounded-3 shadow-lg  bg-light  p-4">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $product->getName() ?></h5>
-                            <span class="card-text"><?php echo $product->getPrice() . "$" ?></span>
+                            <!-- titolo -->
+                            <h4 class="card-title mb-4"><?php echo $product->getName() ?></h4>
 
+                            <!-- immagine -->
+                            <div class="-lc-img rounded-4 overflow-hidden mb-3">
+                                <img src="<?php echo $product->getImage() ?>" alt="<?php echo $product->getName() ?>" ">
+                            </div>
+
+                            <!-- prezzo -->
+                            <span class=" -lc-price card-text"><?php echo "Price " . $product->getPrice() . "$" ?></span>
+
+                                <div class="-lc-category"> <!-- cane o gatto -->
+                                    <div class="card-text"><?php echo $product->getCategory() ?></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
         </div>
-    </div>
 </body>
 
 <html />
