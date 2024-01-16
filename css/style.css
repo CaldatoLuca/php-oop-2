@@ -1,0 +1,17 @@
+:root {
+  --sand-1: rgb(243, 237, 200);
+  --sand-2: rgb(234, 209, 150);
+  --red-1: rgb(191, 49, 49);
+  --red-2: rgb(125, 10, 10);
+}
+
+/* !Common */
+body {
+  background-color: var(--sand-1);
+}
+h1 {
+  color: var(--red-1);
+}
+h3 {
+  color: var(--red-2);
+}

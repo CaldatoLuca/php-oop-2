@@ -14,19 +14,19 @@ $shop = new Shop('Nome Shop');
 
 //aggiungo i cibi al catalogo
 foreach ($foods as $food) {
-    $food = new Food($food['name'], $food['price'], $food['image'], $food['category'], $food['food_type'], $food['ingredients'], $food['expiration_date'], $food['allergens'],);
+    $food = new Food($food['type'], $food['name'], $food['price'], $food['image'], $food['category'], $food['food_type'], $food['ingredients'], $food['expiration_date'], $food['allergens'],);
     $shop->addToCatalog($food);
 };
 
 //aggiungo i giochi al catalogo
 foreach ($toys as $toy) {
-    $toy = new Toy($toy['name'], $toy['price'], $toy['image'], $toy['category'], $toy['color'], $toy['toy_type']);
+    $toy = new Toy($toy['type'], $toy['name'], $toy['price'], $toy['image'], $toy['category'], $toy['color'], $toy['toy_type']);
     $shop->addToCatalog($toy);
 };
 
 //aggiungo le cuccie al catalogo
 foreach ($kennels as $kennel) {
-    $kennel = new Kennel($kennel['name'], $kennel['price'], $kennel['image'], $kennel['category'], $kennel['material'], $kennel['kennel_type']);
+    $kennel = new Kennel($kennel['type'], $kennel['name'], $kennel['price'], $kennel['image'], $kennel['category'], $kennel['material'], $kennel['kennel_type']);
     $shop->addToCatalog($kennel);
 };
 

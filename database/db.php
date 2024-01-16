@@ -2,7 +2,8 @@
 
 $foods = [
     [
-        "name" => "Area Wild a base di Manzo e Salmone 4Kg",
+        "type" => "food",
+        "name" => "Area Wild a base di Manzo e Salmone",
         "price" => 40.24,
         "image" => "./img/dog-food.jpg",
         "category" => "DOG",
@@ -12,6 +13,7 @@ $foods = [
         "allergens" => []
     ],
     [
+        "type" => "food",
         "name" => "Oasy Gatto Paté 100 G",
         "price" => 0.65,
         "image" => "./img/cat-food.jpg",
@@ -25,6 +27,7 @@ $foods = [
 
 $toys = [
     [
+        "type" => "toy",
         "name" => "Trixie corda gioco per cani",
         "price" => 4.99,
         "image" => "./img/dog-toy.jpg",
@@ -33,6 +36,7 @@ $toys = [
         "toy_type" => "Chewable rope",
     ],
     [
+        "type" => "toy",
         "name" => "Colonna tiragraffi Scratch & Play",
         "price" => 3.00,
         "image" => "./img/cat-toy.jpg",
@@ -43,6 +47,7 @@ $toys = [
 ];
 $kennels = [
     [
+        "type" => "kennel",
         "name" => "Letto Cozy Kingdom",
         "price" => 21.99,
         "image" => "./img/dog-kennel.jpg",
@@ -52,6 +57,7 @@ $kennels = [
 
     ],
     [
+        "type" => "kennel",
         "name" => "Vanansa",
         "price" => 17.99,
         "image" => "./img/cat-kennel.jpg",

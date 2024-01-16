@@ -9,10 +9,10 @@ class Kennel extends Product
     private string $material;
     private string $kennel_type;
 
-    function __construct(string $_name, float $_price, string $_image, string $_category, string $_material, string $_kennel_type)
+    function __construct(string $_type, string $_name, float $_price, string $_image, string $_category, string $_material, string $_kennel_type)
     {
         //richiamo il contruct del padre e aggiunge le 2 proprietà della cuccia 
-        parent::__construct($_name, $_price, $_image, $_category);
+        parent::__construct($_type, $_name, $_price, $_image, $_category);
 
         $this->material = $_material;
         $this->kennel_type = $_kennel_type;

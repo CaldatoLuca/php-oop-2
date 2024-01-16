@@ -9,10 +9,10 @@ class Toy extends Product
     private string $color;
     private string $toy_type;
 
-    function __construct(string $_name, float $_price, string $_image, string $_category, string $_color, string $_toy_type)
+    function __construct(string $_type, string $_name, float $_price, string $_image, string $_category, string $_color, string $_toy_type)
     {
         //richiamo il contruct del padre e aggiunge le 2 proprietà del gioco 
-        parent::__construct($_name, $_price, $_image, $_category);
+        parent::__construct($_type, $_name, $_price, $_image, $_category);
 
         $this->color = $_color;
         $this->toy_type = $_toy_type;
