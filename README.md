@@ -24,6 +24,8 @@ _Metodi_
 
 NB: è strettamente legata alla funzione `printProduct()`
 
+---
+
 ### Category
 
 _Variabili_
@@ -33,6 +35,8 @@ Definisce le due categorie principali del sito
 `CANI` --> 'cani';
 
 `GATTI` --> 'gatti';
+
+---
 
 ### Product
 
@@ -60,6 +64,8 @@ si ripete per ogni variabile della classe
 
 `printProduct()` --> stampa le varibili del prodotto
 
+---
+
 ### Food figlia di Product
 
 Classe che definisce il prodotto di tipo food nel sito
@@ -86,6 +92,8 @@ si ripete per ogni variabile della classe
 
 NB `_construct` e `printProduct()` richiamano le funzioni del padre
 
+---
+
 ### Toy figlia di Product
 
 Classe che definisce il prodotto di tipo toy nel sito
@@ -107,6 +115,8 @@ si ripete per ogni variabile della classe
 `printProduct()` --> stampa le varibili del prodotto
 
 NB `_construct` e `printProduct()` richiamano le funzioni del padre
+
+---
 
 ### Kennel figlia di Product
 
