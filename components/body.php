@@ -21,17 +21,38 @@
                             </div>
 
                             <!-- prezzo -->
-                            <span class=" -lc-price card-text"><?php echo "Price " . $product->getPrice() . "$" ?></span>
+                            <div class=" -lc-price card-text">
+                                <?php echo "Price " . $product->getPrice() . "$" ?>
+                            </div>
 
-                                <div class="-lc-category"> <!-- cane o gatto -->
-                                    <div class="card-text"><?php echo $product->getCategory() ?></div>
-                                </div>
+                            <!-- icone -->
+                            <div class="-lc-category d-flex gap-2 ">
+                                <?php if ($product->getCategory() === 'dog') : ?>
+                                    <!-- cane o gatto -->
+                                    <div class="card-text"><i class="fa-solid fa-dog"></i></div>
+                                <?php else : ?>
+                                    <div class="card-text"><i class="fa-solid fa-cat"></i></div>
+                                <?php endif; ?>
+
+                                <?php if ($product->getType() === 'food') : ?>
+                                    <!-- tipo di prodotto -->
+                                    <div class="card-text"><i class="fa-solid fa-bone"></i></div>
+                                <?php elseif ($product->getType() === 'toy') : ?>
+                                    <div class="card-text"><i class="fa-solid fa-baseball"></i></div>
+                                <?php elseif ($product->getType() === 'kennel') : ?>
+                                    <div class="card-text"><i class="fa-solid fa-warehouse"></i></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
                 </div>
+            <?php endforeach; ?>
         </div>
+    </div>
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/d7e1ca7451.js" crossorigin="anonymous"></script>
+    <!-- fontawesome/ -->
 </body>
 
 <html />
