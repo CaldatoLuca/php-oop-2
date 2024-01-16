@@ -1,13 +1,8 @@
 # PHP OOP E-Commerce
 
-Immaginare quali sono le classi necessarie per creare uno shop online con le seguenti caratteristiche:
+Creazione di un e-commerce per la vendita di prodotti per cani e gatti.
 
-- L'e-commerce vende _prodotti_ per animali.
-- I prodotti sono categorizzati, le _categorie_ sono Cani o Gatti.
-- I prodotti saranno oltre al _cibo_, anche _giochi_, _cucce_, etc.
-  Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
-
-  ![thumnail](./img/thumbnail.jpeg)
+![thumnail](./img/thumbnail.jpeg)
 
 ## Classi
 
