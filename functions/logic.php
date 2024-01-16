@@ -30,10 +30,14 @@ foreach ($kennels as $kennel) {
     $shop->addToCatalog($kennel);
 };
 
-foreach ($shop->catalog as $product) {
-    $shop->printCatalogProduct($product);
-    echo "<hr/>";
-}
+// echo '<pre>';
+// var_dump($shop->catalog);
+// echo '</pre>';
+
+// foreach ($shop->catalog as $product) {
+//     $shop->printCatalogProduct($product);
+//     echo "<hr/>";
+// }
 /*
 //creo tre oggetti da inserire nel catalogo del negozio
 $prova_cibo = new Food('Cibo nome', 14.73, 'src image', Category::GATTI, 'Vegetarian', ['potatoes', 'carrots', 'apricot'], '04/08/2027', []);
