@@ -1,5 +1,6 @@
 <?php
 
+//classe del negozio 
 class Shop
 {
     protected string $name;
@@ -10,11 +11,14 @@ class Shop
         $this->name = $_name;
     }
 
+    //pusho nell' array catalog il product che definisco
     public function addToCatalog($_product)
     {
         $this->catalog[] = $_product;
     }
 
+    //se come atrributo inserisco uno dei miei oggetti lo stampo perchè questa funzione da si che il mio oggetto richiami la funzione
+    //che lo stampa (definita in Product e ridefinita in Food, Toy e Kennel)
     public function printCatalogProduct($prodotto)
     {
         $prodotto->printProduct();

@@ -1,6 +1,9 @@
 <?php
 
+//importo la classe Product
 require_once __DIR__ . '/Product.php';
+
+// creo la classe per il cibo e la faccio figlia di Product
 class Food extends Product
 {
     private string $food_type;
@@ -10,6 +13,7 @@ class Food extends Product
 
     function __construct(string $_name, float $_price, string $_image, string $_category, string $_food_type, array $_ingredients, string $_expiration_date, array $_allergens)
     {
+        //richiamo il contruct del padre e aggiunge le 4 proprietà del cibo 
         parent::__construct($_name, $_price, $_image, $_category);
 
         $this->food_type = $_food_type;
@@ -19,6 +23,7 @@ class Food extends Product
     }
 
     /**
+     * getter del tipo di cibo
      * @return string
      */
     function getFoodType()
@@ -27,6 +32,7 @@ class Food extends Product
     }
 
     /**
+     * getter degli ingredinti
      * @return array
      */
     function getIngredients()
@@ -36,6 +42,7 @@ class Food extends Product
 
 
     /**
+     * getter della data di scadenza
      * @return string
      */
     function getExpirationDate()
@@ -45,6 +52,7 @@ class Food extends Product
 
 
     /**
+     * getter degli allergeni
      * @return array
      */
     function getAllergens()
@@ -52,8 +60,10 @@ class Food extends Product
         return $this->allergens;
     }
 
+    //stampa dell' oggetto cibo
     function printProduct()
     {
+        //richaimo la stampa dal padre e stampo le 4 varibili dell cibo
         parent::printProduct();
         echo "Food Type: " . $this->getFoodType() . "<br>";
         echo "Ingredients: ";

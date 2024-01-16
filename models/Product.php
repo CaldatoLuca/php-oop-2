@@ -1,5 +1,6 @@
 <?php
 
+//classe generale del mio prodotto
 class Product
 {
     protected $name;
@@ -7,6 +8,7 @@ class Product
     protected $image;
     protected $category;
 
+    //construct
     function __construct(string $_name, float $_price, string $_image, string $_category)
     {
         $this->name = $_name;
@@ -16,6 +18,7 @@ class Product
     }
 
     /**
+     * getter del name
      * @return string
      */
     function getName()
@@ -24,6 +27,7 @@ class Product
     }
 
     /**
+     * getter del prezzo
      * @return float
      */
     function getPrice()
@@ -32,6 +36,7 @@ class Product
     }
 
     /**
+     * getter della src dell' immagine
      * @return string
      */
     function getImage()
@@ -40,6 +45,7 @@ class Product
     }
 
     /**
+     * getter della categoria
      * @return string
      */
     function getCategory()
@@ -47,6 +53,7 @@ class Product
         return $this->category;
     }
 
+    //stampa delle variabili di istanza del prodotto
     function printProduct()
     {
         echo "Name: " . $this->getName() . "<br>";
