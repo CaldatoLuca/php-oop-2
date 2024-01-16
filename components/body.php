@@ -43,6 +43,48 @@
                                     <div class="card-text"><i class="fa-solid fa-warehouse"></i></div>
                                 <?php endif; ?>
                             </div>
+
+                            <!-- informazioni personalizzate -->
+                            <?php if ($product->getType() === 'food') : ?>
+                                <!-- tipo di prodotto -->
+                                <div class="card-text">
+                                    <!-- tipo di cibo -->
+                                    <div class=" -lc-food-type card-text">
+                                        <?php echo "Food Type: " . $product->getFoodType() ?>
+                                    </div>
+
+                                    <!-- ingredienti -->
+                                    <div class=" -lc-food-ingredients card-text">
+                                        <div>Ingredients:</div>
+                                        <ul>
+                                            <?php foreach ($product->getIngredients() as $ingredient) : ?>
+                                                <li><?= $ingredient ?></li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php elseif ($product->getType() === 'toy') : ?>
+                                <!-- colore -->
+                                <div class=" -lc-toy-color card-text">
+                                    <?php echo "Color: " . $product->getColor() ?>
+                                </div>
+
+                                <!-- tipo di gioco -->
+                                <div class=" -lc-toy-type card-text">
+                                    <?php echo "Toy Type: " . $product->getToyType() ?>
+                                </div>
+                            <?php elseif ($product->getType() === 'kennel') : ?>
+                                <!-- materiale -->
+                                <div class=" -lc-kennel-material card-text">
+                                    <?php echo "Material: " . $product->getMaterial() ?>
+                                </div>
+
+                                <!-- tipo di cuccia -->
+                                <div class=" -lc-kennel-type card-text">
+                                    <?php echo "Kennel Type: " . $product->getKennelType() ?>
+                                </div>
+                            <?php endif; ?>
+
                         </div>
                     </div>
                 </div>

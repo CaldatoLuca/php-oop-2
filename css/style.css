@@ -20,6 +20,7 @@ h3,
 /* cards */
 .card {
   position: relative;
+  height: 100%;
 }
 .-lc-category {
   position: absolute;
