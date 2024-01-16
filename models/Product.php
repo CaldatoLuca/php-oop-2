@@ -40,7 +40,7 @@ class Product
     function printProduct()
     {
         echo "Name: " . $this->getName() . "<br>";
-        echo "Price: " . $this->getPrice() . "<br>";
+        echo "Price: " . $this->getPrice() . "$" . "<br>";
         echo "Image src: " . $this->getImage() . "<br>";
     }
 }
