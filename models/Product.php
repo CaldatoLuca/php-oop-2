@@ -2,15 +2,17 @@
 
 class Product
 {
-    protected string $name;
-    protected float $price;
-    protected string $image;
+    protected $name;
+    protected $price;
+    protected $image;
+    protected $category;
 
-    function __construct($_name, $_price, $_image)
+    function __construct(string $_name, float $_price, string $_image, string $_category)
     {
         $this->name = $_name;
         $this->price = $_price;
         $this->image = $_image;
+        $this->category = $_category;
     }
 
     /**
@@ -37,10 +39,19 @@ class Product
         return $this->image;
     }
 
+    /**
+     * @return string
+     */
+    function getCategory()
+    {
+        return $this->category;
+    }
+
     function printProduct()
     {
         echo "Name: " . $this->getName() . "<br>";
         echo "Price: " . $this->getPrice() . "$" . "<br>";
         echo "Image src: " . $this->getImage() . "<br>";
+        echo "Category: " . $this->getCategory() . "<br>";
     }
 }

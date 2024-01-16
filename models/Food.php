@@ -8,9 +8,9 @@ class Food extends Product
     private string $expiration_date;
     private array $allergens;
 
-    function __construct($_name, float $_price, $_image, $_type, array $_ingredients, $_expiration_date, array $_allergens)
+    function __construct(string $_name, float $_price, string $_image, string $_category, string $_type, array $_ingredients, string $_expiration_date, array $_allergens)
     {
-        parent::__construct($_name, $_price, $_image);
+        parent::__construct($_name, $_price, $_image, $_category);
 
         $this->type = $_type;
         $this->ingredients = $_ingredients;

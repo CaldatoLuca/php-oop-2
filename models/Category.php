@@ -2,7 +2,6 @@
 
 class Category
 {
-
-    public $dog = 'Dog';
-    public $cat = 'Cat';
+    const CANI = "Cani";
+    const GATTI = "Gatti";
 }
