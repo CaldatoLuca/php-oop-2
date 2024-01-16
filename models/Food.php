@@ -3,16 +3,16 @@
 require_once __DIR__ . '/Product.php';
 class Food extends Product
 {
-    private string $type;
+    private string $food_type;
     private array $ingredients;
     private string $expiration_date;
     private array $allergens;
 
-    function __construct(string $_name, float $_price, string $_image, string $_category, string $_type, array $_ingredients, string $_expiration_date, array $_allergens)
+    function __construct(string $_name, float $_price, string $_image, string $_category, string $_food_type, array $_ingredients, string $_expiration_date, array $_allergens)
     {
         parent::__construct($_name, $_price, $_image, $_category);
 
-        $this->type = $_type;
+        $this->food_type = $_food_type;
         $this->ingredients = $_ingredients;
         $this->expiration_date = $_expiration_date;
         $this->allergens = $_allergens;
@@ -21,9 +21,9 @@ class Food extends Product
     /**
      * @return string
      */
-    function getType()
+    function getFoodType()
     {
-        return $this->type;
+        return $this->food_type;
     }
 
     /**
@@ -55,7 +55,7 @@ class Food extends Product
     function printProduct()
     {
         parent::printProduct();
-        echo "Type: " . $this->getType() . "<br>";
+        echo "Food Type: " . $this->getFoodType() . "<br>";
         echo "Ingredients: ";
         foreach ($this->getIngredients() as $ingredient) {
             echo $ingredient . ", ";
