@@ -6,7 +6,7 @@ Creazione di un e-commerce per la vendita di prodotti per cani e gatti.
 
 ## Classi
 
-#### Shop
+### Shop
 
 Questa classe definisce il mio E-Commerce.
 
@@ -24,7 +24,7 @@ _Metodi_
 
 NB: è strettamente legata alla funzione `printProduct()`
 
-#### Category
+### Category
 
 _Variabili_
 
@@ -34,7 +34,7 @@ Definisce le due categorie principali del sito
 
 `GATTI` --> 'gatti';
 
-#### Product
+### Product
 
 Classe che definisce il prodotto generico nel sito
 
@@ -60,7 +60,7 @@ si ripete per ogni variabile della classe
 
 `printProduct()` --> stampa le varibili del prodotto
 
-#### Food figlia di Product
+### Food figlia di Product
 
 Classe che definisce il prodotto di tipo food nel sito
 
@@ -86,7 +86,7 @@ si ripete per ogni variabile della classe
 
 NB `_construct` e `printProduct()` richiamano le funzioni del padre
 
-#### Toy figlia di Product
+### Toy figlia di Product
 
 Classe che definisce il prodotto di tipo toy nel sito
 
@@ -108,7 +108,7 @@ si ripete per ogni variabile della classe
 
 NB `_construct` e `printProduct()` richiamano le funzioni del padre
 
-#### Kennel figlia di Product
+### Kennel figlia di Product
 
 Classe che definisce il prodotto di tipo kennel nel sito
 
