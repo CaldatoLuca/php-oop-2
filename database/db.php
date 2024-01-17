@@ -1,6 +1,6 @@
 <?php
 
-$foods = [
+$products = [
     [
         "type" => "food",
         "name" => "Area Wild",
@@ -22,10 +22,7 @@ $foods = [
         "ingredients" => ['Chicken 60%', 'Beef 30%', 'Turkey 10%', 'Cereals'],
         "expiration_date" => "02/11/2026",
         "allergens" => ['Cereals', 'Gluten']
-    ]
-];
-
-$toys = [
+    ],
     [
         "type" => "toy",
         "name" => "Trixie corda gioco per cani",
@@ -43,9 +40,7 @@ $toys = [
         "category" => "cat",
         "color" => 'Red',
         "toy_type" => "Scratching Post",
-    ]
-];
-$kennels = [
+    ],
     [
         "type" => "kennel",
         "name" => "Letto Cozy Kingdom",

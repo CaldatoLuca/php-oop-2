@@ -2,7 +2,7 @@
     <div class="container">
         <!-- titolo sito -->
         <div class="-lc-title text-center mb-5">
-            <h1>BoolCommerce</h1>
+            <h1><?php echo $shop->getName() ?></h1>
             <h3>The Best E-Commerce for Cats and Dogs</h3>
         </div>
 

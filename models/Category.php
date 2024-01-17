@@ -3,6 +3,6 @@
 //definisco le categorie con delle costanti
 class Category
 {
-    const CANI = "Cani";
-    const GATTI = "Gatti";
+    const CANI = "dog";
+    const GATTI = "cat";
 }

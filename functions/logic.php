@@ -10,7 +10,23 @@ require_once __DIR__ . '/../models/Shop.php';
 require_once __DIR__ . '/../database/db.php';
 
 //creo il mio oggetto negozio
-$shop = new Shop('Nome Shop');
+$shop = new Shop('BoolCommerce');
+
+//aggiungo prodotti al catalogo con controllo sul type
+foreach ($products as $product) {
+    if ($product['type'] === 'food') {
+        $product = new Food($product['type'], $product['name'], $product['price'], $product['image'], $product['category'], $product['food_type'], $product['ingredients'], $product['expiration_date'], $product['allergens'],);
+    } elseif ($product['type'] === 'toy') {
+        $product = new Toy($product['type'], $product['name'], $product['price'], $product['image'], $product['category'], $product['color'], $product['toy_type']);
+    } elseif ($product['type'] === 'kennel') {
+        $product = new Kennel($product['type'], $product['name'], $product['price'], $product['image'], $product['category'], $product['material'], $product['kennel_type']);
+    }
+
+    $shop->addToCatalog($product);
+}
+
+/*
+//metodo con db con tre array, uno per prodotto
 
 //aggiungo i cibi al catalogo
 foreach ($foods as $food) {
@@ -29,6 +45,8 @@ foreach ($kennels as $kennel) {
     $kennel = new Kennel($kennel['type'], $kennel['name'], $kennel['price'], $kennel['image'], $kennel['category'], $kennel['material'], $kennel['kennel_type']);
     $shop->addToCatalog($kennel);
 };
+*/
+
 
 // echo '<pre>';
 // var_dump($shop->catalog);

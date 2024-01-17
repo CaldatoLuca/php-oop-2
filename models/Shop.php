@@ -6,6 +6,15 @@ class Shop
     protected string $name;
     public array $catalog = [];
 
+    /**
+     * getter del nome dello shop
+     * @return string
+     */
+    function getName()
+    {
+        return $this->name;
+    }
+
     function __construct(string $_name)
     {
         $this->name = $_name;
