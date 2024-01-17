@@ -54,7 +54,7 @@
                                     </div>
 
                                     <!-- ingredienti -->
-                                    <div class=" -lc-food-ingredients card-text">
+                                    <div class=" -lc-food-ingredients card-text mb-3">
                                         <div>Ingredients:</div>
                                         <ul>
                                             <?php foreach ($product->getIngredients() as $ingredient) : ?>
@@ -70,7 +70,7 @@
                                 </div>
 
                                 <!-- tipo di gioco -->
-                                <div class=" -lc-toy-type card-text">
+                                <div class=" -lc-toy-type card-text mb-3">
                                     <?php echo "Toy Type: " . $product->getToyType() ?>
                                 </div>
                             <?php elseif ($product->getType() === 'kennel') : ?>
@@ -80,7 +80,7 @@
                                 </div>
 
                                 <!-- tipo di cuccia -->
-                                <div class=" -lc-kennel-type card-text">
+                                <div class=" -lc-kennel-type card-text mb-3">
                                     <?php echo "Kennel Type: " . $product->getKennelType() ?>
                                 </div>
                             <?php endif; ?>
