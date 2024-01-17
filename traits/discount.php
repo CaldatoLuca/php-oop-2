@@ -4,12 +4,16 @@
 trait Discount
 {
     /**
-     * @param float 
+     *  
      * @return float
      */
-    function discountedPrice(float $discountPercentage)
+    function discountedPrice($discountPercentage)
     {
         $discount = $this->getPrice() * ($discountPercentage / 100);
-        return $this->getPrice() - $discount;
+        if ($discountPercentage === 100) {
+            throw new Exception('Discount not valid, we do not sell stuff for free');
+        } else {
+            return $this->getPrice() - $discount;
+        }
     }
 }
