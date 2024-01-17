@@ -1,9 +1,10 @@
 <body class="text-dark p-5">
     <div class="container">
         <!-- titolo sito -->
-        <div class="-lc-title text-center mb-5">
+        <div class="-lc-title text-center mb-4">
             <h1><?php echo $shop->getName() ?></h1>
             <h3>The Best E-Commerce for Cats and Dogs</h3>
+            <h5>It's your lucky day, only for today <span class="text-danger">20% discount</span> on all items in the shop</h5>
         </div>
 
         <!-- cards -->
@@ -22,7 +23,8 @@
 
                             <!-- prezzo -->
                             <div class=" -lc-price card-text">
-                                <?php echo "Price " . $product->getPrice() . "$" ?>
+                                <?php echo "Price " . $product->getPrice() . "$" . "<br>" ?>
+                                <?php echo "Discounted Price " . $product->discountedPrice(20) . "$" ?>
                             </div>
 
                             <!-- icone -->

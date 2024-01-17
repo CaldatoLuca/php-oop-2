@@ -1,8 +1,12 @@
 <?php
 
+include_once __DIR__ . '/../traits/discount.php';
+
 //classe generale del mio prodotto
 class Product
 {
+    use Discount;
+
     protected $type;
     protected $name;
     protected $price;
