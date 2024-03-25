@@ -1,166 +1,39 @@
 # PHP OOP E-Commerce
 
-Creazione di un e-commerce per la vendita di prodotti per cani e gatti.
+
 
 ![thumnail](./img/thumbnail.jpeg)
 
-## Classi
 
-### Shop
 
-Questa classe definisce il mio E-Commerce.
 
-_Variabili_
+## Descrizione
 
-`$name` --> nome del sito
+Questo progetto è un'applicazione PHP orientata agli oggetti per la gestione di un e-commerce specializzato nella vendita di prodotti per cani e gatti. Attraverso una struttura basata su classi, il sistema consente agli utenti di visualizzare e acquistare una vasta gamma di prodotti, tra cibo, giocattoli e cuccie, dedicati agli amici a quattro zampe.
 
-`$catalog` --> array che raccoglie tutti gli oggetti dello Shop
+## Funzionalità/Caratteristiche
 
-_Metodi_
+- **Classi Strutturate**: Il progetto utilizza un'architettura orientata agli oggetti con diverse classi, come Shop, Product, Food, Toy e Kennel, per gestire in modo efficace i vari aspetti dell'e-commerce.
+  
+- **Gestione del Catalogo**: La classe Shop gestisce un catalogo di prodotti, consentendo agli utenti di aggiungere nuovi prodotti, visualizzare i dettagli dei prodotti esistenti e organizzare i prodotti per categorie.
 
-`addToCatalog($_product)` --> aggiunge a `$catalog` un prodotto
+- **Tipologie di Prodotti Diverse**: La struttura prevede diverse sottoclassi di Product per rappresentare le diverse tipologie di prodotti offerti, come cibo, giocattoli e cuccie, ciascuna con le proprie caratteristiche specifiche.
 
-`printCatalogProduct($prodotto)` --> stampa le variabili di un prodotto
+- **Creazione Dinamica del Catalogo**: Attraverso l'uso di un database, il catalogo viene popolato dinamicamente con i prodotti disponibili, garantendo una gestione efficiente e scalabile dell'inventario.
 
-NB: è strettamente legata alla funzione `printProduct()`
+- **Visualizzazione dei Prodotti**: Le informazioni sui prodotti vengono visualizzate in modo chiaro e ordinato attraverso l'utilizzo di cards, consentendo agli utenti di accedere facilmente a dettagli come il nome, il prezzo e l'immagine del prodotto.
 
----
+## Utilizzo/Tecnologie
 
-### Category
+- **PHP Orientato agli Oggetti**: Il progetto è sviluppato utilizzando PHP con un approccio orientato agli oggetti, che consente una struttura modulare e manutenibile del codice.
 
-_Variabili_
+- **HTML e CSS**: Per la presentazione dell'e-commerce viene utilizzato HTML per la struttura e CSS per lo stile delle pagine web, garantendo un'esperienza utente piacevole e intuitiva.
 
-Definisce le due categorie principali del sito
+- **Database**: È previsto l'utilizzo di un database per memorizzare le informazioni sui prodotti e gestire dinamicamente il catalogo dell'e-commerce.
 
-`CANI` --> 'cani';
+- **Iterazione Dinamica**: L'uso di strutture dati dinamiche, come foreach loops, consente di iterare attraverso il catalogo dei prodotti e generare dinamicamente le cards per la visualizzazione.
 
-`GATTI` --> 'gatti';
+## Installazione
 
----
+Poiché questo è solo un progetto di documentazione e descrizione, non è necessario alcun processo di installazione. Tuttavia, per implementare effettivamente l'e-commerce descritto, è necessario sviluppare e configurare il codice PHP, HTML, CSS e il database, oltre ad ospitare l'applicazione su un server web compatibile con PHP.
 
-### Product
-
-Classe che definisce il prodotto generico nel sito
-
-_Variabili_
-
-`$type` --> definisce di che tipo è l' oggetto (food, toy, kettel)
-
-`$name` --> definisce il nome del prodotto
-
-`$price` --> definisce il prezzo del prodotto
-
-`$image` --> definisce l' src dell' immagine (salvata localmente in img)
-
-`$category` --> definisce se il prodotto è per cane o gatto
-
-_Metodi_
-
-`_construct` --> per inizializzare l' istanza
-
-`getType()` --> restituisce il `$type` dell' oggetto
-
-si ripete per ogni variabile della classe
-
-`printProduct()` --> stampa le varibili del prodotto
-
----
-
-### Food figlia di Product
-
-Classe che definisce il prodotto di tipo food nel sito
-
-_Variabili_
-
-`$food_type` --> definisce di che la tipologia di cibo
-
-`$ingredients` --> array che raccogli gli ingredienti
-
-`$expiration_date` --> definisce la data di scadenza
-
-`$allergens` --> array che raccogli gli allergeni
-
-_Metodi_
-
-`_construct` --> per inizializzare l' istanza
-
-`getFoodType()` --> restituisce il `$food_type` dell' oggetto
-
-si ripete per ogni variabile della classe
-
-`printProduct()` --> stampa le varibili del prodotto
-
-NB `_construct` e `printProduct()` richiamano le funzioni del padre
-
----
-
-### Toy figlia di Product
-
-Classe che definisce il prodotto di tipo toy nel sito
-
-_Variabili_
-
-`$color` --> definisce il colore del gioco
-
-`$toy_type` --> definisce di che tipo è il gioco
-
-_Metodi_
-
-`_construct` --> per inizializzare l' istanza
-
-`getColor()` --> restituisce il `$color` dell' oggetto
-
-si ripete per ogni variabile della classe
-
-`printProduct()` --> stampa le varibili del prodotto
-
-NB `_construct` e `printProduct()` richiamano le funzioni del padre
-
----
-
-### Kennel figlia di Product
-
-Classe che definisce il prodotto di tipo kennel nel sito
-
-_Variabili_
-
-`$material` --> definisce il materiale della cuccia
-
-`$kennel_type` --> definisce di che tipo di cuccia
-
-_Metodi_
-
-`_construct` --> per inizializzare l' istanza
-
-`getMaterial()` --> restituisce il `$material` dell' oggetto
-
-si ripete per ogni variabile della classe
-
-`printProduct()` --> stampa le varibili del prodotto
-
-NB `_construct` e `printProduct()` richiamano le funzioni del padre
-
-## Logica
-
-Partendo da un `database` creo le istanze da inserire nel catalogo del sito.
-
-Una volta raccolti tutti i prodotti in `$catalog` lo userò per stampare i dati in pagina.
-
-```php
-//creo il mio oggetto negozio
-$shop = new Shop('Nome Shop');
-
-//aggiungo i cibi al catalogo
-foreach ($foods as $food) {
-    $food = new Food($food['type'], $food['name'], $food['price'], $food['image'], $food['category'], $food['food_type'], $food['ingredients'], $food['expiration_date'], $food['allergens'],);
-    $shop->addToCatalog($food);
-};
-
-//ripeto per toy e kennel
-```
-
-## Creazione delle cards
-
-Per creare le cards uso un `foreach` sul `$catalog` e in base a quello che volgio stampare richiamo i metodi getter.
-
-Per la stampa delle informazioni corrette uso `if` e `else-if` con controllo sulla category (dog e cat) e sul type (food, toy e kennel).
